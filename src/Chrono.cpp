@@ -1,9 +1,5 @@
 #include "../include/Chrono.hpp"
-#include <iostream>
-#include <chrono>
-#include <random>
-#include <ctime>
-#include <vector>
+
 /**
  * \file Chrono.cpp
  * \brief interface pour la class chrono en c++

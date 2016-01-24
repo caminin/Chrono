@@ -5,6 +5,8 @@
 #include <string>
 #include <chrono>
 #include <ctime>
+#include <iostream>
+#include <random>
 
 /**
  * \file Chrono.hpp
