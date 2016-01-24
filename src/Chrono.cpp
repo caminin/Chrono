@@ -40,14 +40,15 @@ Chrono::stop()
         {
             _elapsed_time+=chrono::duration_cast<chrono::nanoseconds>(end-_start).count();
         }
-        else if(_precision=="milliseconds")
-        {
-            _elapsed_time+=chrono::duration_cast<chrono::milliseconds>(end-_start).count();
-        }
         else if(_precision=="microseconds")
         {
             _elapsed_time+=chrono::duration_cast<chrono::microseconds>(end-_start).count();
         }
+        else if(_precision=="milliseconds")
+        {
+            _elapsed_time+=chrono::duration_cast<chrono::milliseconds>(end-_start).count();
+        }
+        
         else if(_precision=="seconds")
         {
             _elapsed_time+=chrono::duration_cast<chrono::seconds>(end-_start).count();
