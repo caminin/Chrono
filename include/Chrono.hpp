@@ -6,6 +6,19 @@
 #include <chrono>
 #include <ctime>
 
+/**
+ * \file Chrono.hpp
+ * \brief interface pour la class chrono en c++
+ * \author CHARLOT Rodolphe
+ * \version 1.0
+ * \date 24 janvier 2016
+ *
+ * Class destinée à simpifier l'utilisation de la class chrono dans std 
+ * Elle permet notamment une pause et reset, et une précision variable
+ *
+ */
+
+
 
 class Chrono
 {
