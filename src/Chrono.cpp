@@ -10,11 +10,14 @@
  * \author CHARLOT Rodolphe
  * \version 1.0
  * \date 24 janvier 2016
+ * \licence BSD
  *
  * Class destinée à simpifier l'utilisation de la class chrono dans std 
  * Elle permet notamment une pause et reset, et une précision variable
+ * Elle peut être réutilisée sous les conditions de sa licence
  *
  */
+
 
 using namespace std;
 

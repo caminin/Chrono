@@ -7,6 +7,7 @@
  * \author CHARLOT Rodolphe
  * \version 1.0
  * \date 24 janvier 2016
+ * \licence BSD
  *
  * main destiné à expliquer brièvement l'utilisation du chrono
  *
