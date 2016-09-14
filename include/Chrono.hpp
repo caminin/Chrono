@@ -22,8 +22,6 @@
  *
  */
 
-
-
 class Chrono
 {
 public:
@@ -32,7 +30,12 @@ public:
   *   \param elapsed_time Temps avec lequel le chrono démarre, 0 par défaut
   *   \param precision Unités du chrono, milliseconds par défaut
   */
-  Chrono( float elapsed_time=0,std::string precision="milliseconds");
+  Chrono(std::string precision="auto",bool automatic_precision_change=true,float elapsed_time=0);
+  
+  
+  friend std::ostream &operator<<(std::ostream &os, Chrono &mychrono) { 
+	return os << mychrono.getDuration() << " " << mychrono.getPrecision();
+  }
   /**
   *   \brief Lance le chrono
   *
@@ -57,18 +60,27 @@ public:
   *   Permet aux méthodes qui utilisent le chrono de récupérer la valeur finale
   */
   float getDuration();
-  
+  /**
+  *   \brief Renvoie la précision
+  *
+  *   Permet aux méthodes qui utilisent le chrono de récupérer la valeur finale
+  */
   std::string getPrecision(){return _precision;}
 private:
   /** Temps de départ du chrono*/
   std::chrono::time_point<std::chrono::system_clock> _start;
-  /** Temps entre un start() et un stop() */
-  float _elapsed_time;
   /** unité du temps du test */
   std::string _precision;
+  bool _auto;
+  /** Temps entre un start() et un stop() */
+  float _elapsed_time;
   /** booléen si le chrono a démarré ou pas*/
   bool _isCalculing;
+  
 };
+
+
+
 
 
 #endif // __TESTENV_INCLUDED__
