@@ -30,7 +30,7 @@ public:
   *   \param elapsed_time Temps avec lequel le chrono démarre, 0 par défaut
   *   \param precision Unités du chrono, milliseconds par défaut
   */
-  Chrono(std::string precision="auto",bool automatic_precision_change=true,float elapsed_time=0);
+  Chrono(std::string precision="milliseconds",bool automatic_precision_change=true,float elapsed_time=0);
   
   
   friend std::ostream &operator<<(std::ostream &os, Chrono &mychrono) { 
